@@ -68,7 +68,59 @@
             border: 1px solid lightgray;
             padding: 10px 20px 40px;
             box-shadow: 2px 5px 5px 2px lightgray;
+            opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  
         }
+        body {
+      background-color: #FF5733;
+      background-image: linear-gradient(to bottom, #FF5733, #FF8C00);
+    }
+#login.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover::before {
+  left: 0;
+}
+
+.btn-primary:hover {
+  color: #007bff;
+  background-color: #fff;
+  border-color: #007bff;
+}
+
+h1.text-center {
+  color: gold;
+}
+
+.btn[name="login"] {
+  color: silver;
+}
+.form-control {
+  width: 100%;
+}
+
     </style>
 </head>
 <body>
@@ -112,6 +164,7 @@
     </form>
   </div>
 </div>
+
 </body>
 </html>
 <script type="text/javascript">
@@ -128,9 +181,14 @@
             btn.innerHTML = "<i class='far fa-eye-slash'></i>"
         }
     }
-
+    
     //Error message hide
     setTimeout(function(){
         document.getElementsByClassName('alert')[0].style.display = 'none';
     }, 3000);
+
+    $(document).ready(function() {
+  $('#login').addClass('active');
+});
+
 </script>

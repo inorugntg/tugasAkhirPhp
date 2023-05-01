@@ -9,7 +9,7 @@
         $sql = "SELECT image FROM users WHERE id='$id'";
         $query = mysqli_query($link,$sql);
         $arr = mysqli_fetch_assoc($query);
-
+        
         $dsql = "DELETE FROM users WHERE id='$id'";
         $dquery = mysqli_query($link,$dsql);
         if($dquery){

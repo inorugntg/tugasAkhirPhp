@@ -45,26 +45,70 @@
     }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+style="height: 100%";>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modify User</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="update.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <style>
+        body {
+  background-color: #FF5733;
+  background-image: linear-gradient(to bottom, #FF5733, #FF8F33);
+}
+/* Animasi untuk tombol "Submit" */
+button[name="submit"] {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+button[name="submit"]:hover {
+  top: -5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Animasi untuk tombol "Back" */
+a.btn-secondary {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+a.btn-secondary:hover {
+  top: -5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.text-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  margin: 0 10px;
+}
+h1 {
+  color: silver;
+}
+.btn-secondary{
+    text-decoration: none;
+}
+    </style>
 </head>
 <body>
+<h1 class="text-center">Edit Existing User</h1>
     <div class="container">
-        <h1 class="text-center">Edit Existing User</h1>
         <form action="" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="name"><strong>Name</strong></label>
                 <input type="text" class="form-control" placeholder="Enter fullname" name="name" value="<?php echo $result['name'] ?>" required>
             </div>
             <div class="form-group">
-                <label for="email"><strong>Sex</strong></label><br>
+                <label for="email"><strong>Gender</strong></label><br>
                 <?php if($result['sex'] == 'male'){ ?>
                     <input type="radio" name="sex" value="male" checked> Male &nbsp;
                     <input type="radio" name="sex" value="female"> Female

@@ -8,6 +8,7 @@
     $offset = ($page-1)*$limit;
     $sql = "SELECT * FROM users LIMIT $limit OFFSET $offset";
     $query = mysqli_query($link,$sql);
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,20 +18,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP CRUD Operation</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <style>
-        .fas{
-            font-size: 20px;
-        }
-        .fa-edit:hover{
-            color: green;
-        }
-        .fa-trash:hover{
-            color: red;
-        }
+        div h1 {
+  color: rgb(192, 192, 255);
+}
+.btn-info {
+    text-decoration: none;
+}
+
+.btn-danger {
+    text-decoration: none;
+}
     </style>
 </head>
 <body>
@@ -45,11 +48,10 @@
             <a href="logout.php" class="btn btn-danger"><i class='fas fa-sign-out-alt'></i> Logout</a>
         </p>
     </nav>
+
+    <div><h1 class="text-center">User List</h1></div>
+    <div class="text-right"><a href="create.php" class="btn btn-success mb-2"><i class='fas fa-plus'></i> Add User</a></div>
     <div class="container">
-        <h1 class="text-center">User List</h1>
-
-        <div class="text-right"><a href="create.php" class="btn btn-success mb-2"><i class='fas fa-plus'></i> Add User</a></div>
-
         <?php if(isset($_SESSION['success'])){ ?>
             <div class="alert alert-success"><?php echo $_SESSION['success']; unset($_SESSION['success']); ?></div>
         <?php } ?>
@@ -65,11 +67,12 @@
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
-                    <th>Sex</th>
+                    <th>Gender</th>
                     <th>Phone</th>
                     <th>Email</th>
                     <th>Photo</th>
                     <th>Action</th>
+                    <th>Detail</th>
                 </tr>
             </thead>
             <tbody class="text-center">
@@ -95,22 +98,32 @@
                         </td>
                         <td><?php echo $row['phone'] ?></td>
                         <td><?php echo $row['email'] ?></td>
-                        <td><img src="uploads/<?php echo $row['image'] ?>" width="100" height="125"></td>
+                        <td><img src="uploads/<?php echo $row['image'] ?>" width="115" height="115"></td>
                         <td>
                             <a href="update.php?id=<?php echo $row['id'] ?>" class="text-dark"><i class='fas fa-edit'></i></a>&nbsp;&nbsp;
                             <a href="delete.php?id=<?php echo $row['id'] ?>" class="text-dark"><i class='fas fa-trash'></i></a>
+                        </td>
+                        <td >
+                        <a href="detail.php?id=<?php echo $row['id'] ?>" class="btn btn-info"><i class='fas fa-info-circle'></i> Detail</a>
                         </td>
                     </tr>
                 <?php }} ?>
             </tbody>
         </table>
-        <ul class="pagination">
+    </div>
+    <ul class="pagination">
             <li class="page-item <?php echo ($page > 1) ? '' : 'disabled' ?>"><a class="page-link" href="index.php?page=<?php echo $page-1 ?>">Previous</a></li>
         <?php for($i=1;$i<=$total_page;$i++){ ?>
             <li class="page-item <?php echo ($page == $i) ? 'active' : '' ?>"><a class="page-link" href="index.php?page=<?php echo $i ?>"><?php echo $i ?></a></li>
         <?php } ?>
             <li class="page-item <?php echo ($total_page > $page) ? '' : 'disabled' ?>"><a class="page-link" href="index.php?page=<?php echo $page+1 ?>">Next</a></li>
-        </ul>
-    </div>
+    </ul>
+
+    <script>
+function showDetail(id) {
+    window.location.href = "detail.php?id=" + id;
+}
+</script>
+
 </body>
 </html>

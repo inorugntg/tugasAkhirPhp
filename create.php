@@ -35,40 +35,51 @@
     }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+style="height: 100%";
+>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add User</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="create.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <style>
+       h1 {
+  color: silver;
+}
+.btn-secondary{
+    text-decoration: none;
+}
+    </style>
 </head>
 <body>
+<h1 class="text-center" >Register User</h1>
     <div class="container">
-        <h1 class="text-center">Register User</h1>
         <form action="" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="name"><strong>Name</strong></label>
-                <input type="text" class="form-control" placeholder="Enter fullname" name="name" required>
+                <input style="width:80%" type="text" class="form-control" placeholder="Enter fullname" name="name" required>
             </div>
             <div class="form-group">
-                <label for="email"><strong>Sex</strong></label><br>
+                <label for="email"><strong>Gender</strong></label><br>
                 <input type="radio" name="sex" value="male"> Male &nbsp;
                 <input type="radio" name="sex" value="female"> Female
             </div>
             <div class="form-group">
                 <label for="phone"><strong>Phone</strong></label>
-                <input type="text" class="form-control" placeholder="Enter phone number" name="phone" required>
+                <input style="width:80%" type="text" class="form-control" placeholder="Enter phone number" name="phone" required>
             </div>
             <div class="form-group">
                 <label for="email"><strong>Email</strong></label>
-                <input type="email" class="form-control" placeholder="Enter email" name="email" required>
+                <input style="width:80%" type="email" class="form-control" placeholder="Enter email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="photo"><strong>Photo</strong></label><br>
-                <input type="file" name="photo">
+                <input style="width:80%" type="file" name="photo">
             </div>
             <div class="text-center mt-5">
                 <button type="submit" class="btn btn-primary" name="submit">Submit</button>
