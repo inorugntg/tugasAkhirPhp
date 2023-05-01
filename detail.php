@@ -80,16 +80,20 @@ if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
         .btn:hover {
             transform: translateY(-3px);
         }
+
         .text-center {
-        text-align: center;
-        color: silver;
-      }
-      
+            text-align: center;
+            color: silver;
+        }
+
+        .btn:active {
+            transform: translateY(3px);
+        }
     </style>
 </head>
 
 <body>
-<h1 class="text-center">Detail Record</h1>
+    <h1 class="text-center">Detail Record</h1>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -123,7 +127,7 @@ if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
                             <h3>Photo</h3>
                         </label>
                         <?php if (!empty($row["image"])) : ?>
-                            <img src="<?php echo $row["image"]; ?>" alt="Photo">
+                            <img src="uploads/<?php echo $row["image"]; ?>" alt="Photo" width="115" height="110">
                         <?php else : ?>
                             <p class="form-control-static">No photo available</p>
                         <?php endif; ?>
