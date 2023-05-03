@@ -86,8 +86,8 @@ if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
             color: silver;
         }
 
-        .btn:active {
-            transform: translateY(3px);
+        .form-group {
+            margin-bottom: 20px;
         }
     </style>
 </head>
