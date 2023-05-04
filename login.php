@@ -30,6 +30,7 @@
                     setcookie('username','');
                     setcookie('password','');
                 }
+                
                 $data = mysqli_fetch_assoc($query);
                 $_SESSION['id'] = $data['id'];
                 $_SESSION['name'] = $data['name'];
