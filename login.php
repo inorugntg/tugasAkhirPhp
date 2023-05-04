@@ -138,7 +138,7 @@ h1.text-center {
             </div>
             <input type="text" class="form-control" placeholder="Enter Username" id="username" name="username" value="<?php echo isset($_COOKIE['username']) ? $_COOKIE['username'] : '' ?>" requied>
         </div>
-
+        
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text"><i class='fas fa-key'></i></span>

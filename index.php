@@ -136,7 +136,6 @@ echo "Total pages: " . $total_page;
                     <th>Email</th>
                     <th>Photo</th>
                     <th>Action</th>
-                    <th>Detail</th>
                 </tr>
             </thead>
             <tbody class="text-center">
@@ -168,10 +167,8 @@ echo "Total pages: " . $total_page;
                             <td><img src="uploads/<?php echo $row['image'] ?>" width="115" height="115"></td>
                             <td>
                                 <a href="update.php?id=<?php echo $row['id'] ?>" class="text-dark"><i class='fas fa-edit'></i></a>&nbsp;&nbsp;
-                                <a href="delete.php?id=<?php echo $row['id'] ?>" class="text-dark"><i class='fas fa-trash'></i></a>
-                            </td>
-                            <td>
-                                <a href="detail.php?id=<?php echo $row['id'] ?>" class="btn btn-info"><i class='fas fa-info-circle'></i> Detail</a>
+                                <a href="delete.php?id=<?php echo $row['id'] ?>" class="text-dark"><i class='fas fa-trash'></i></a>&nbsp;&nbsp;
+                                <a href="detail.php?id=<?php echo $row['id'] ?>" class="text-dark"><i class='fas fa-info-circle'></i></a>
                             </td>
                         </tr>
                 <?php }
@@ -192,7 +189,7 @@ echo "Total pages: " . $total_page;
             window.location.href = "detail.php?id=" + id;
         }
     </script>
-
+    
 </body>
 
 </html>
