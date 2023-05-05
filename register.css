@@ -1,0 +1,15 @@
+body {
+    
+    background-color: #FF5733;
+    background-image: linear-gradient(to bottom, #FF5733, #FF8C00);
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+form {
+    background-color: #fff;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}

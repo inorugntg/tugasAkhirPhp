@@ -135,14 +135,14 @@ h1.text-center {
     <form action="" method="POST">
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text"><i class='fas fa-user'></i></span>
+                <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
             </div>
             <input type="text" class="form-control" placeholder="Enter Username" id="username" name="username" value="<?php echo isset($_COOKIE['username']) ? $_COOKIE['username'] : '' ?>" requied>
         </div>
         
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text"><i class='fas fa-key'></i></span>
+                <span class="input-group-text"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
             </div>
             <input type="password" class="form-control" placeholder="Enter Password" id="password" name="password" value="<?php echo isset($_COOKIE['password']) ? $_COOKIE['password'] : '' ?>" required>
             <div class="input-group-append">
@@ -157,10 +157,14 @@ h1.text-center {
             <input type="text" class="form-control" placeholder="Enter Captcha" id="captcha" name="captcha" required>
         </div>
 
+        <div class="text-center mb-4">
+          <p>Already have an account? <a href="register.php" style="text-decoration: none;">Register here</a>.</p>
+        </div>
+
         <div class="text-right mb-4">
             <input type="checkbox" id="remember_me" name="remember_me" <?php echo isset($_COOKIE['username']) || isset($_COOKIE['password']) ? 'checked' : '' ?>> Remember me
         </div>
-
+       
         <button type="submit" class="btn btn-primary btn-block" name="login">Login</button>
     </form>
   </div>
