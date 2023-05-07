@@ -9,14 +9,14 @@ jika ingin menggunakan koneksi cruds_oke maka usn dan password ada dibawah ini
 === Login Detail ===
 cruds_oke.sqL
 
-Username: admin
+Username: admin ---
 Password: password@123
 
-Username: ahmes
+Username: ahmes ---
 Password: ahmes123
 
-Username: ikbalBBM
+Username: ikbalBBM ---
 Password: ikbal123
 
-Username: inoru
+Username: inoru ---
 Password: inoru123
