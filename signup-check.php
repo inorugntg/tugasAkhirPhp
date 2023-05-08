@@ -11,7 +11,7 @@ if (isset($_POST['name']) && isset($_POST['username'])
 	   $link = htmlspecialchars($link);
 	   return $link;
 	}
-
+	
 	$name = validate($_POST['name']);
 	$username = validate($_POST['username']);
 	$pass = validate($_POST['password']);

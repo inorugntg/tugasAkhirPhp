@@ -27,7 +27,7 @@
                       placeholder="Name"><br>
           <?php }?>
 
-          <label>username</label>
+          <label>Username</label>
           <?php if (isset($_GET['username'])) { ?>
                <input type="text" 
                       name="username" 
@@ -36,7 +36,7 @@
           <?php }else{ ?>
                <input type="text" 
                       name="username" 
-                      placeholder="username"><br>
+                      placeholder="Username"><br>
           <?php }?>
 
 
