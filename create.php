@@ -86,7 +86,9 @@ style="height: 100%";
                 <button type="submit" class="btn btn-primary" name="submit">Submit</button>
                 <a href="index.php" class="btn btn-secondary">Back</a>
             </div>
+            
         </form>
     </div>
+    
 </body>
 </html>

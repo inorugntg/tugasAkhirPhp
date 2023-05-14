@@ -14,7 +14,6 @@ $total_page = 0;
 
 // logika untuk menghitung nilai total_page
 // ...
-
 // gunakan variabel total_page di baris ke-168
 echo "Total pages: " . $total_page;
 
@@ -111,6 +110,7 @@ echo "Total pages: " . $total_page;
     <div>
         <h1 class="text-center">User List</h1>
     </div>
+    
     <div class="text-right"><a href="create.php" class="btn btn-success mb-2"><i class='fas fa-plus'></i> Add User</a></div>
     <div class="container">
         <?php if (isset($_SESSION['success'])) { ?>
@@ -183,7 +183,7 @@ echo "Total pages: " . $total_page;
         <?php } ?>
         <li class="page-item <?php echo ($total_page > $page) ? '' : 'disabled' ?>"><a class="page-link" href="index.php?page=<?php echo $page + 1 ?>">Next</a></li>
     </ul>
-
+    
     <script>
         function showDetail(id) {
             window.location.href = "detail.php?id=" + id;

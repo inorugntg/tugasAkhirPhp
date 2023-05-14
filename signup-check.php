@@ -32,7 +32,6 @@ if (isset($_POST['name']) && isset($_POST['username'])
 	}
 
 	else{
-
 		// hashing the password
         $pass = md5($pass);
 
@@ -59,3 +58,5 @@ if (isset($_POST['name']) && isset($_POST['username'])
 	header("Location: signup.php");
 	exit();
 }
+
+
