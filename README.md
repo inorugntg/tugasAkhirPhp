@@ -1,6 +1,6 @@
 jika ingin menggunakan koneksi phpcrud maka usn dan password ada dibawah ini
 === Login Detail ===
-phpcrud.sqL
+phpcrud.sql yang berada di folder database
 
 Username: admin
 Password: password@123
