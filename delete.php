@@ -2,7 +2,7 @@
     session_start();
     include "authentication.php";
     include "config.php";
-
+    
     $id = $_GET['id'];
 
     if(isset($_SESSION['id'])){
