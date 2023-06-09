@@ -5,3 +5,5 @@ Username: admin
 Password: password@123
 
 * jika ingin login sesuai dengan keinginan user maka silahkan isi data untuk login dengan cara registrasi di halaman register.php
+
+* untuk melihat dokumentasi halaman CRUD bisa dilihat di folder CRUD_Documentation
